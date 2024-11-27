@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+            const uname = document.f1.username.value;
+            if (uname.length < 9)
+                alert('username should be 10 charcters');
+            document.f1.username.focus();
+            return flase;
+            const pass = document.f1.password.value;
+            if (pass.length < 9)
+                alert('pass should be 10 charcters');
+            document.f1.password.focus();
+            return flase;
+            const emaild = document.f1.email.value;
+            if (!emaild.includes("@"))
+                alert('enter valid email id');
+            document.f1.email.focus();
+            return flase;
+            alert('registration succesful');
+            return true
+        }
+    </script>
+</head>
+
+<body>
+    <h1>registration form</h1>
+    <form type="h1" onsubmit="return validate()">
+        <input type="username" id="username" placeholder="useranme">
+        <input type="password" id="password" placeholder="password">
+        <input type="email" id="email" placeholder="email">
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+
+</html>
